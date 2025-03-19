@@ -19,7 +19,14 @@ form.addEventListener('submit', (e) => {
     } else {
         resposta.innerText = ` ${num} não é um número primo.`
     }
+
+    clearInput()
 })
+
+const clearInput = () => {
+    let input = document.getElementById('num')
+    input.value = ''
+}
 
 //CONSIDERAÇÕES
 //todo número é divisível por 1 e por ele mesmo valor % 1 == 0 && valor % valor == 0

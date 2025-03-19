@@ -14,7 +14,6 @@ body {
 .container img {
     height: 15em;
     width: auto;
-    margin-right: 2em;
 }
 
 .container form {
@@ -25,6 +24,10 @@ body {
 
 label {
     font-size: 19px;
+}
+
+#num {
+    height: 1.5em;
 }
 
 .container__input {
@@ -58,6 +61,7 @@ label {
 @media (max-width: 1000px) {
     .container {
         flex-direction: column;
+        height: 80vh;
     }
 
     .container #num {
