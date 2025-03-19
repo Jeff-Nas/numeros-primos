@@ -1,0 +1,78 @@
+body {
+    background-color: azure;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    height: 200px;
+    width: auto;
+    margin-right: 2em;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+label {
+    font-size: 19px;
+}
+
+.container__input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+
+.container h3 {
+    height: 3em;
+    margin-top: 2em;
+}
+
+.button {
+    border: none;
+    width: 15em;
+    align-self: center;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgb(143, 177, 224);
+    font-weight: bolder;
+}
+
+.button:hover {
+    background-color: rgb(31, 116, 190);
+    color: azure;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container #num {
+        width: 6em;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .button {
+        width: 13em;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}

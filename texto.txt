@@ -1,0 +1,41 @@
+Verificação de número primo usando JavaScript
+Nem sempre a lógica de um sistema será exibida, mas hoje eu quero mostrar a lógica por trás de uma verificação simples se um número é ou não um número primo.
+Lembrando que um número primo é aquele que é divisível somente por 1 e por ele mesmo (o número 1 não é mais considerado número primo). 
+Sendo assim, é preciso encontrar uma lógica para saber "num" é divisível por somente "num" e por 1, onde "num" é o número inserido pelo usuário.
+Estes dois números citados já fazem parte da lógica que vamos usar, mas "num + 1" não. Quero dizer que dado "num == 5" preciso que o JavaScript comece a divisão
+em 1 e termine em 5, que foi o número escolhido. Verificando assim se 5 não será divi pelos os outros números dentro deste intervalo. 
+E para isso usamo o loop for que irá iterar sobre cada número até chegar em num(5 no exemplo).
+
+for (i = 1; i <= num; i++)
+
+i recebe o valor 1 e, enquanto ele for menor ou igual ao numero escolhido, será acrescido de mais 1. Resultado de i:
+
+i = 1
+i = 2
+i = 3
+i = 4
+i = 5
+
+Isso quer dizer que o loop irá iterar 5 vezes e executar os seguintes blocos de código para cada iteração:
+
+Verifica se o resto da divisão num/i resulta em 0. EX: 5/5 = 1 e resto = 0. Caso seja 0, irá acrenscentar 1 à variável numerosDivisores.
+if (num % i == 0) {
+            numerosDivisores++
+        }
+Em seguida irá verificar se a variável numerosDivisores é igual a 2 (armazenou o número +1 + 1 após o loop). Se for verdadeiro exibirá 
+que é um número primo, se for falso exibirá o contrário.
+if (numerosDivisores == 2) {
+        resposta.innerText = `O número ${num} é primo.`
+    } else {
+        resposta.innerText = `O número ${num} não é primo.`
+    }
+Mais detalhadamente:
+num == 5
+numerosDivisores = 0
+5 / 1 = 5 (resto 0)  [i = 1]  numerosDivisores = 1
+5 / 2 = 2 (resto 1)  [i = 2]
+5 / 3 = 1 (resto 2)  [i = 3]
+5 / 4 = 1 (resto 1)  [i = 4]
+5 / 1 = 5 (resto 0)  [i = 5]  numerosDivisores = 2
+
+Logo, o número 5 é um número primo.
